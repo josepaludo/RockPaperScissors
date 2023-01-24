@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FFFBF5;
+    color: #00425A;
+}
+button {
+    margin: 50px;
+}
+div {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+img, #playerImg, #pcImg {
+    margin-bottom: 0px;
+    width: 150px;
+    height: 150px;
+}
+hr {
+    width: 700px;
+    border: 0;
+    border-top: 2px;
+    border-style: dashed;
+}
+#buttonsDiv, #resultAnnouncer, h2 {
+    margin: 0;
+}
+#resultAnnouncer {
+    width: 100px;
+    margin-left: 50px;
+}
+.containerDiv {
+    margin-top: 0;
+}

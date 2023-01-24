@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+    <title>Forms and script</title>
+</head>
+
+<body>
+
+    <div>
+        <h2>Rock Paper Scissors!!!</h2>
+    </div>
+    <hr>
+
+    <div class="containerDiv">
+        <div>
+            <h2>You</h2>
+        </div>
+        <div id="playerImg"></div>
+        <div id="pcImg"></div>
+        <div>
+            <h2>PC</h2>
+        </div>
+    </div>
+    <hr>
+
+    <div id="buttonsDiv">
+        <button onclick="chooseHandPosition(0)">Rock</button>
+        <button onclick="chooseHandPosition(1)">Paper</button>
+        <button onclick="chooseHandPosition(2)">Scissors</button>
+    </div>
+
+    <div class="containerDiv">
+        <h2 id="count">Count: 0</h2>
+        <h2 id="resultAnnouncer"></h2>
+    </div>
+
+</body>
+
+</html>
