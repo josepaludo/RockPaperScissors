@@ -36,13 +36,17 @@ hr {
     border: 0;
     border-top: 2px;
     border-style: dashed;
+    border-color: var(--blue);
 }
 #buttonsDiv, #resultAnnouncer, h2 {
     margin: 0;
 }
 #resultAnnouncer {
-    width: 100px;
+    width: 120px;
     margin-left: 50px;
+}
+#count {
+    width: 336px;
 }
 .containerDiv {
     margin-top: 0;

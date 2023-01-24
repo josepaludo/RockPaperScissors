@@ -1,31 +1,35 @@
-let GLOBAL_COUNT = 0;
+let WIN = 0;
+let LOSS = 0;
+let DRAW = 0;
 
 function announceResult(result) {
     let resultDiv = document.getElementById("resultAnnouncer");
     resultDiv.innerHTML = result;
 }
 
+function updateCount() {
+    let countH2 = document.getElementById("count");
+    countH2.innerHTML = `Win/Loss/Draw: ${WIN}/${LOSS}/${DRAW}`;
+}
+
 function checkResult(handShape, pcChoice) {
     let result = "Defeat!";
     if ((handShape === pcChoice+1) || (handShape === 0 && pcChoice === 2)) {
         result = "Victory!!!";
-        increaseCount();
-    }
-    if (handShape === pcChoice) {
+        WIN += 1;
+    } else if (handShape === pcChoice) {
         result = "Draw.";
+        DRAW += 1;
+    } else {
+        LOSS += 1;
     }
+    updateCount();
     return result;
 }
 
-function increaseCount() {
-    let countH2 = document.getElementById("count");
-    GLOBAL_COUNT += 1;
-    countH2.innerHTML = `Count: ${GLOBAL_COUNT}`;
-}
-
-function displayCorrespondingImage(handShape, divId)
-{
+function displayCorrespondingImage(handShape, divId) {
     let image = document.createElement("img");
+
     switch (handShape) {
         case 0:
             image.src = "assets/rock.png";
@@ -39,7 +43,7 @@ function displayCorrespondingImage(handShape, divId)
     }
     let div = document.getElementById(divId);
 
-    for (child of div.childNodes) {
+    for (child of div.children) {
         child.remove()
     }
     div.appendChild(image);
